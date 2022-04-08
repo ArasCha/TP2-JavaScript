@@ -44,3 +44,15 @@ var album = {
 }
 
 console.log(album['Fresh Cream'].artist);
+
+function albumYear (album) {
+    
+    let retour = `
+    Artiste: ${album.artist}
+    Année: ${album.year}
+    Titre: ${album.title}
+    `;
+    return retour
+}
+
+console.log(albumYear(albums['Fresh Cream']));
