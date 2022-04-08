@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var album = {
     'Fresh Cream': 'Cream', 
@@ -9,6 +9,8 @@ var album = {
     'Ummagumma': 'Pink Floyd',
     'Camembert Electrique': 'Gong',
     'The Piper at the Gates of Dawn': 'Pink Floyd'
-}
+};
 
-console.log(album['Fresh Cream']);
+let artiste = album['Fresh Cream'];
+
+console.log(artiste);

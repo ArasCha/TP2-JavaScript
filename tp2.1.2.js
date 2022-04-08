@@ -38,10 +38,10 @@ function sortTable(t) {
     }
 }
 
-/**
- * 1- La nature du problème semble être les variables i qui ne sont pas déclarées.
- * Il faut donc les déclarer via l'utilisation de "let".
- * 
- * 2- Pour détecter ce problème plus facilement, on peut inscrire "use strict" au début de code. Cela passe 
- * le code en mode strict, et chaque utilisation de variables non déclarée renvoie donc une erreur.
- */
+/*
+1- La nature du problème semble être les variables i qui ne sont pas déclarées.
+Il faut donc les déclarer via l'utilisation de "let".
+
+2- Pour détecter ce problème plus facilement, on peut inscrire "use strict" au début de code. Cela passe 
+le code en mode strict, et chaque utilisation de variables non déclarée renvoie donc une erreur.
+*/
