@@ -1,20 +1,21 @@
 'use-strict';
 
-function Album(artist, year, title) {
+function Album(artist, year, title) { // constructeur d'Album
     this.artist = artist;
     this.year = year;
     this.title = title;
 
-    artist.addAlbum(this);
+    artist.addAlbum(this); // ajout de l'album à l'artiste
 }
 
-function Artist(name) {
+function Artist(name) { // constructeur d'Album
 
     this.name = name;
     this.albums = [];
-    Artist.list.push(this);
+    Artist.list.push(this); // ajout de la nouvelle instance à la liste
 }
-Artist.list = [];
+Artist.list = []; // variable de classe liste pour accéder aux
+// données peut importe l'instance
 
 Artist.withName = function withName (name) {
     return Artist.list.find(artist => artist.name === name);
