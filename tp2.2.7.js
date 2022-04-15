@@ -32,3 +32,17 @@ let artiste = new Artist("Risitas");
 new Album(artiste, 2000, "La Chancla")
 
 let rechArtiste = Artist.withName("Risitas");
+// console.log(rechArtiste);
+
+
+
+console.log(JSON.stringify(rechArtiste, replacer));
+
+
+function replacer(key,value) {
+    if(value instanceof Artist) {
+      return value.name;
+    } else {
+        return value;
+    }
+}
