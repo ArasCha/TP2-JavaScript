@@ -1,6 +1,6 @@
 'use strict'
 
-var albums = {
+var album = {
     'Fresh Cream': {
         artist: 'Cream', 
         year: 1966,
@@ -41,22 +41,20 @@ var albums = {
         year: 1967,
         title: 'The Piper at the Gates of Dawn'
     }
-};
-
-console.log(albums['Fresh Cream'].artist);
-
-function albumTitle (album) {
-    return album.title;
 }
 
-function albumArtist (album) {
-    return album.artist;
-}
+//console.log(album['Fresh Cream'].artist);
 
 function albumYear (album) {
-    return album.year;
+    
+    let retour = `
+    Artiste: ${album.artist}
+    Année: ${album.year}
+    Titre: ${album.title}
+    `;
+    return retour
 }
 
-console.log(albumTitle(albums['Fresh Cream']));
-console.log(albumArtist(albums['Fresh Cream']));
-console.log(albumYear(albums['Fresh Cream']));
+console.log(JSON.stringify(album));
+
+//console.log(albumYear(album['Fresh Cream']));
