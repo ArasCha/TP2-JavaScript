@@ -2,16 +2,23 @@
   "name": "tp2",
   "version": "1.0.0",
   "description": "",
+  "main": "example-2-ko.js",
+  "type": "module",
   "scripts": {
-    "start": "gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArasCha/TP2-JavaScript.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArasCha/TP2-JavaScript/issues"
+  },
+  "homepage": "https://github.com/ArasCha/TP2-JavaScript#readme",
   "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cached": "^1.1.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-watch": "^5.0.1",
-    "object.entries": "^1.1.1"
+    "node-fetch": "^3.2.3"
   }
 }
