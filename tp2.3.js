@@ -1,13 +1,11 @@
 'use-strict';
 
-// const fetch = require("node-fetch");
-
 const fetch = require('node-fetch');
 
 // Nathan MAICHER
 // Aras CHAIGNE
 
-async function getData() {
+async function getData() {// fonction qui retourne une promesse (semble pas valide pour gulp :/)
     
     const url = "http://musicbrainz.org/ws/2/artist/5927990e-34bb-493f-b5da-b7b28d43698f?inc=releases&fmt=json";
 
