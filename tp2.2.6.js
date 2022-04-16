@@ -1,4 +1,6 @@
-'use-strict';
+'use strict';
+// Nathan MAICHER
+// Aras CHAIGNE
 
 function Album(artist, year, title) { // constructeur d'Album
     this.artist = artist;
@@ -17,19 +19,20 @@ function Artist(name) { // constructeur d'Album
 Artist.list = []; // variable de classe liste pour accéder aux
 // données peut importe l'instance
 
-Artist.withName = function withName (name) {
+Artist.withName = function withName(name) {
     return Artist.list.find(artist => artist.name === name);
-}
+};
 // Méthode non prototypale (statique) qui retourne l'instance de l'artiste
 // que l'on cherche
 
 Artist.prototype.addAlbum = function addAlbum(album) {
     this.albums.push(album);
-}
+};
 // méthode d'instance qui ajoute l'album à la liste d'albums de l'artiste
 
 
 
-let artiste = new Artist("Risitas");
-new Album(artiste, 2000, "La Chancla")
-let rechArtiste = Artist.withName("Risitas");
+const artiste = new Artist('Risitas');
+new Album(artiste, 2000, 'La Chancla');
+const rechArtiste = Artist.withName('Risitas');
+console.log(rechArtiste);

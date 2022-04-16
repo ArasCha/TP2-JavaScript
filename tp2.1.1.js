@@ -1,5 +1,8 @@
-"use strict";
-let t = [0, 3, 2, 5];
+'use strict';
+// Nathan MAICHER
+// Aras CHAIGNE
+
+const t = [0, 3, 2, 5];
 console.log('Plus petite valeur ' + t[findMinIndex(t, 0, t.length)]);
 console.log('Plus petite valeur parmi les trois dernières ' + t[findMinIndex(t, 1, t.length)]);
 sortTable(t);
@@ -14,7 +17,7 @@ function findMinIndex(t, from, to) {
     for (let i = from + 1; i < to; i += 1) {
         if (t[j] > t[i]) {
             j = i;
-        }   
+        }
     }
     return j;
 }

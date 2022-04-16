@@ -1,60 +1,62 @@
-'use strict'
+'use strict';
+// Nathan MAICHER
+// Aras CHAIGNE
 
-var album = {
+const album = {
     'Fresh Cream': {
-        artist: 'Cream', 
+        artist: 'Cream',
         year: 1966,
-        title: 'Fresh Cream'
+        title: 'Fresh Cream',
     },
     'Hot Rats': {
         artist: 'Frank Zappa',
         year: 1969,
-        title: 'Hot Rats'
+        title: 'Hot Rats',
     },
     'Space Oddity': {
         artist: 'David Bowie',
         year: 1969,
-        title: 'Space Oddity'
+        title: 'Space Oddity',
     },
     'Merry Christmas': {
         artist: 'Mariah Carey',
         year: 1994,
-        title: 'Merry Christmas'
+        title: 'Merry Christmas',
     },
     'Song from a Room': {
         artist: 'Leonard Cohen',
         year: 1969,
-        title: 'Song from a Room'
+        title: 'Song from a Room',
     },
     'Ummagumma': {
         artist: 'Pink Floyd',
         year: 1969,
-        title: 'Ummagumma'
+        title: 'Ummagumma',
     },
     'Camembert Electrique': {
         artist: 'Gong',
         year: 1971,
-        title: 'Camembert Electrique'
+        title: 'Camembert Electrique',
     },
     'The Piper at the Gates of Dawn': {
         artist: 'Pink Floyd',
         year: 1967,
-        title: 'The Piper at the Gates of Dawn'
-    }
-}
+        title: 'The Piper at the Gates of Dawn',
+    },
+};
 
 //console.log(album['Fresh Cream'].artist);
 
-function albumYear (album) {
-    
-    let retour = `
+function albumYear(album) {
+
+    const retour = `
     Artiste: ${album.artist}
     Année: ${album.year}
     Titre: ${album.title}
     `;
-    return retour
+    return retour;
 }
 
 console.log(JSON.stringify(album));
 
-//console.log(albumYear(album['Fresh Cream']));
+console.log(albumYear(album['Fresh Cream']));

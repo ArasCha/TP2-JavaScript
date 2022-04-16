@@ -1,14 +1,19 @@
 'use-strict';
 
-import fetch from 'node-fetch';
+// const fetch = require("node-fetch");
+
+const fetch = require('node-fetch');
+
+// Nathan MAICHER
+// Aras CHAIGNE
 
 async function getData() {
     
     const url = "http://musicbrainz.org/ws/2/artist/5927990e-34bb-493f-b5da-b7b28d43698f?inc=releases&fmt=json";
 
     try {
-        const requete = await fetch(url);
-        const json_data = await requete.json();
+        const requete = await fetch(url); // attente d'une requête HTTP à l'url
+        const json_data = await requete.json(); // attente de la conversion en JSON
         return json_data;
 
     } catch(e) {
@@ -45,26 +50,28 @@ Artist.prototype.addAlbum = function addAlbum(album) {
 
 
 
-getData().then(rep => {
+getData().then(rep => { // après la réponse de la promesse
 
-    const nom = rep['name'];
-    const artiste = new Artist(nom);
-    const liste_sorties = rep['releases'];
+    const nom = rep['name']; // récupération du nom
+    const artiste = new Artist(nom); // création de l'artiste
+    const liste_sorties = rep['releases']; // récupération des sorties
 
     liste_sorties.map(sortie => {
         const annee = new Date(sortie['date']).getFullYear();
-        const titre = sortie['title'];
+        // parsing de l'année
+        const titre = sortie['title']; // récupération du titre
 
-        new Album(artiste, annee, titre);
-    })
+        new Album(artiste, annee, titre); // création de l'artiste
+    });
 
     console.log(JSON.stringify(artiste, replacer, 4));
-
-})
+});
 
 function replacer(key,value) {
-    if (value instanceof Artist && key!='') { // si c'est artiste
-      return value.name; // on ne donne pas l'instance mais le nom
-    } // ... pour éviter la redondance
-    return value;
+    if (value instanceof Artist && key!='') { // si c'est un artiste
+        // et qu'on est pas au niveau 1 d'affichage (key!='')
+        return value.name; // on ne donne pas l'instance mais le nom
+    } else { // ... pour éviter la redondance
+        return value;
+    }
 }

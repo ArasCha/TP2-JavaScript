@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "example-2-ko.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +18,11 @@
   },
   "homepage": "https://github.com/ArasCha/TP2-JavaScript#readme",
   "dependencies": {
-    "node-fetch": "^3.2.3"
+    "gulp-cached": "^1.1.1",
+    "gulp-eslint": "^6.0.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
